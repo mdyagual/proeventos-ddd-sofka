@@ -8,7 +8,7 @@ public class Fecha implements ValueObject<Date> {
     private final Date valor;
 
     public Fecha(Date valor) {
-        this.valor = valor; //TODO: validar fechas, si se permite en el pasado, fechas en el futuro...
+        this.valor = valor; 
     }
 
     public Fecha() {
