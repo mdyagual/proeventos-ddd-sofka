@@ -46,9 +46,14 @@ public class Informacion implements ValueObject<Informacion.Props> {
             public Direccion direccion(){
                 return direccion;
             }
+            
         };
     }
 
+    public Informacion actualizarDireccion(Direccion d){
+        return new Informacion(this.nombre,this.apellido,this.tipoIdentificacion,this.identificacion,d);
+    }
+    
     public interface Props{
         String nombre();
         String apellido();

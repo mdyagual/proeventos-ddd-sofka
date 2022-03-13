@@ -25,5 +25,28 @@ public class Vendedor extends Entity<VendedorId> {
     public List<Reporte> reportes(){
         return reportes;
     }
+    
+    //actualizar Datos
+    public void actualizarDatos(Dato d){
+        this.datos=d;
+    }
+
+    //agregar reportes
+    public void agregarReporte(Reporte r){
+        reportes.add(r);
+    }
+
+    //actualizar reportes
+    public void actualizarReporte(Reporte r){
+        this.reportes.add(r);
+    }
+
+    //eliminar reportes
+    public void eliminarReporte(Reporte r){
+
+    }
+
+    
+
 
 }
