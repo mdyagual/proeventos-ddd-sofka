@@ -28,21 +28,31 @@ public class Vendedor extends Entity<VendedorId> {
     
     //actualizar Datos
     public void actualizarDatos(Dato d){
-        this.datos=d;
+        this.datos = d;
     }
 
     //agregar reportes
     public void agregarReporte(Reporte r){
-        reportes.add(r);
+        this.reportes.add(r);
     }
 
     //actualizar reportes
     public void actualizarReporte(Reporte r){
-        this.reportes.add(r);
+        if(this.reportes.contains(r)){
+            this.reportes.remove(this.reportes.indexOf(r));
+            this.reportes.add(r);
+        }else{
+            System.out.println("No existe el reporte ingresado");
+        }
     }
 
     //eliminar reportes
     public void eliminarReporte(Reporte r){
+        if(this.reportes.contains(r)){
+            this.reportes.remove(this.reportes.indexOf(r));
+        }else{
+            System.out.println("No existe el reporte ingresado");
+        }
 
     }
 

@@ -47,24 +47,39 @@ public class Contrato extends Entity<ContratoId>{
     }
 
     //actualizar pago
-    public void actualizarPago(){
-
+    public void actualizarPago(Pago p){
+        if(this.pagos.contains(p)){
+            this.pagos.remove(this.pagos.indexOf(p));
+            this.pagos.add(p);
+        }else{
+            System.out.println("No existe el pago ingresado");
+        }
     }
     //actualizar estado
-    public void actualizarEstado(){
+    public void actualizarEstado(Estado e){
+        this.estado = e;
 
     }
     //agregar adicional
-    public void agregarAdicional(){
+    public void agregarAdicional(Adicional add){
+        this.adicionales.add(add);
 
     }
     //actualizar adicional
-    public void actualizarAdicional(){
+    public void actualizarAdicional(Adicional add){
+        if(this.adicionales.contains(add)){
+            this.adicionales.remove(this.adicionales.indexOf(add));
+            this.adicionales.add(add);
+        }else{
+            System.out.println("No existe el adicional ingresado");
+        }
 
     }
     //eliminar  adicional
-    public void eliminarAdicional(){
-        
+    public void eliminarAdicional(Adicional add){
+        if(this.adicionales.contains(add)){
+            this.adicionales.remove(this.adicionales.indexOf(add));
+        }
     }
 
 
