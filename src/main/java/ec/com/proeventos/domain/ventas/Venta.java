@@ -4,8 +4,14 @@ import java.util.List;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import ec.com.proeventos.domain.ventas.event.InformacionClienteActualizado;
+import ec.com.proeventos.domain.ventas.event.ReporteVendedorActualizado;
+import ec.com.proeventos.domain.ventas.event.ReporteVendedorAgregado;
 import ec.com.proeventos.domain.ventas.event.ClienteCreado;
+import ec.com.proeventos.domain.ventas.event.ContratoActualizado;
 import ec.com.proeventos.domain.ventas.event.ContratoCreado;
+import ec.com.proeventos.domain.ventas.event.DireccionClienteActualizado;
+import ec.com.proeventos.domain.ventas.event.DatosVendedorActualizado;
 import ec.com.proeventos.domain.ventas.event.VendedorCreado;
 import ec.com.proeventos.domain.ventas.event.VentaCreada;
 import ec.com.proeventos.domain.ventas.valor.ClienteId;
@@ -13,6 +19,7 @@ import ec.com.proeventos.domain.ventas.valor.ContratoId;
 import ec.com.proeventos.domain.ventas.valor.Dato;
 import ec.com.proeventos.domain.ventas.valor.Fecha;
 import ec.com.proeventos.domain.ventas.valor.Informacion;
+import ec.com.proeventos.domain.ventas.valor.Reporte;
 import ec.com.proeventos.domain.ventas.valor.VendedorId;
 import ec.com.proeventos.domain.ventas.valor.VentaId;
 
@@ -41,7 +48,7 @@ public class Venta extends AggregateEvent<VentaId>{
         return venta;
     }
 
-    //Eventos: Creación
+    //---------------Eventos: Creación
     public void crearVendedor(VendedorId vendedorId, Dato datos){
         appendChange(new VendedorCreado(vendedorId,datos)).apply();
     }
@@ -52,6 +59,62 @@ public class Venta extends AggregateEvent<VentaId>{
 
     public void crearContrato(ContratoId contratoId, Double total){
         appendChange(new ContratoCreado(contratoId,total)).apply();
+    }
+
+    
+    //---------------Eventos: Actualización
+    public void actualizarContrato(ContratoId contratoId, Double total){
+        appendChange(new ContratoActualizado(contratoId,total)).apply();
+    }
+
+    public void actualizarInformacionCliente(ClienteId clienteId, Informacion info){
+        appendChange(new InformacionClienteActualizado(clienteId,info)).apply();
+    }
+
+    public void actualizarDireccionCliente(ClienteId clienteId,Informacion info){
+        appendChange(new DireccionClienteActualizado(clienteId,info)).apply();
+    }
+
+    public void actualizarDatosVendedor(VendedorId vendedorId, Dato datos){
+        appendChange(new DatosVendedorActualizado(vendedorId,datos)).apply();
+    }
+
+    public void actualizarReporteVendedor(VendedorId vendedorId, Reporte r){
+        appendChange(new ReporteVendedorActualizado(vendedorId,r)).apply();
+    }   
+
+    public void actualizarPagoContrato(ContratoId contratoId){
+
+    }
+
+    public void actualizarEstadoContrato(ContratoId contratoId){
+
+    }
+
+    public void actualizarAdicionalContrato(ContratoId contratoId){
+        
+    }
+
+    //---------------Eventos: Agregar
+    public void agregarReporteVendedor(VendedorId vendedorId, Dato datos, Reporte r){
+        appendChange(new ReporteVendedorAgregado(vendedorId,datos,r)).apply();
+    }
+
+    public void agregarAdicionalContrato(ContratoId contratoId){
+        
+    }
+
+    //--------------Eventos: Eliminar
+    public void eliminarReporteVendedor(VendedorId vendedorId){
+
+    }
+
+    public void eliminarPagoContrato(ContratoId contratoId){
+        
+    }
+
+    public void eliminarAdicionalContrato(ContratoId contratoId){
+        
     }
     
 
