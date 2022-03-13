@@ -5,15 +5,18 @@ import java.util.List;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import ec.com.proeventos.domain.ventas.event.InformacionClienteActualizado;
+import ec.com.proeventos.domain.ventas.event.PagoContratoActualizado;
 import ec.com.proeventos.domain.ventas.event.ReporteVendedorActualizado;
 import ec.com.proeventos.domain.ventas.event.ReporteVendedorAgregado;
 import ec.com.proeventos.domain.ventas.event.ReporteVendedorEliminado;
+import ec.com.proeventos.domain.ventas.event.AdicionalContratoActualizado;
 import ec.com.proeventos.domain.ventas.event.AdicionalContratoAgregado;
 import ec.com.proeventos.domain.ventas.event.AdicionalContratoEliminado;
 import ec.com.proeventos.domain.ventas.event.ClienteCreado;
 import ec.com.proeventos.domain.ventas.event.ContratoActualizado;
 import ec.com.proeventos.domain.ventas.event.ContratoCreado;
 import ec.com.proeventos.domain.ventas.event.DireccionClienteActualizado;
+import ec.com.proeventos.domain.ventas.event.EstadoContratoActualizado;
 import ec.com.proeventos.domain.ventas.event.DatosVendedorActualizado;
 import ec.com.proeventos.domain.ventas.event.VendedorCreado;
 import ec.com.proeventos.domain.ventas.event.VentaCreada;
@@ -90,15 +93,15 @@ public class Venta extends AggregateEvent<VentaId>{
     }   
 
     public void actualizarPagoContrato(ContratoId contratoId, Pago pago){
-
+        appendChange(new PagoContratoActualizado(contratoId,pago)).apply();
     }
 
     public void actualizarEstadoContrato(ContratoId contratoId, Estado estado){
-
+        appendChange(new EstadoContratoActualizado(contratoId, estado)).apply();
     }
 
     public void actualizarAdicionalContrato(ContratoId contratoId, Adicional add){
-        
+        appendChange(new AdicionalContratoActualizado(contratoId,add)).apply();
     }
 
     //---------------Eventos: Agregar
