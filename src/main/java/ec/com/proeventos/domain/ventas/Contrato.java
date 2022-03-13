@@ -46,6 +46,27 @@ public class Contrato extends Entity<ContratoId>{
         return adicionales;
     }
 
+    //actualizar pago
+    public void actualizarPago(){
+
+    }
+    //actualizar estado
+    public void actualizarEstado(){
+
+    }
+    //agregar adicional
+    public void agregarAdicional(){
+
+    }
+    //actualizar adicional
+    public void actualizarAdicional(){
+
+    }
+    //eliminar  adicional
+    public void eliminarAdicional(){
+        
+    }
+
 
 
 }
