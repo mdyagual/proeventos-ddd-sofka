@@ -15,4 +15,12 @@ public class Cliente extends Entity<ClienteId>{
     public Informacion informacion(){
         return informacion;
     }
+
+    public void actualizarInformacion(Informacion infoAct){
+        this.informacion = infoAct;
+    }
+
+    public void actualizarDireccionInformación(Informacion infoAct){        
+       this.informacion = informacion.actualizarDireccion(infoAct.value().direccion());
+    }
 }

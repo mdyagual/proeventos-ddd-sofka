@@ -4,12 +4,12 @@ import co.com.sofka.domain.generic.DomainEvent;
 import ec.com.proeventos.domain.ventas.valor.ClienteId;
 import ec.com.proeventos.domain.ventas.valor.Informacion;
 
-public class ClienteCreado extends DomainEvent {
+public class InformacionClienteActualizado extends DomainEvent {
     private final ClienteId clienteId;
     private final Informacion informacion;
-    
-    public ClienteCreado(ClienteId clienteId, Informacion informacion) {
-        super("venta.clientecreado");
+
+    public InformacionClienteActualizado(ClienteId clienteId ,Informacion informacion) {
+        super("venta.informacionclienteactualizado");
         this.clienteId = clienteId;
         this.informacion = informacion;
         
@@ -19,11 +19,9 @@ public class ClienteCreado extends DomainEvent {
         return clienteId;
     }
 
+    
     public Informacion getInformacion() {
         return informacion;
     }
-
-   
-
     
 }
