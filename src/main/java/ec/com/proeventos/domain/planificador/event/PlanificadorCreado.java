@@ -6,13 +6,13 @@ import ec.com.proeventos.domain.planificador.Itinerario;
 import ec.com.proeventos.domain.planificador.Registro;
 import ec.com.proeventos.domain.venta.valor.VentaId;
 
-public class PlanficadorCreado extends DomainEvent {
+public class PlanificadorCreado extends DomainEvent {
     private final Informacion informacion;
     private final Registro registro;
     private final Itinerario itinerario;
     private final VentaId ventaId;
 
-    public PlanficadorCreado(Informacion informacion, Registro registro, Itinerario itinerario,VentaId ventaId) {
+    public PlanificadorCreado(Informacion informacion, Registro registro, Itinerario itinerario,VentaId ventaId) {
         super("planificador.planificadorcreado");
         this.informacion = informacion;
         this.registro = registro;

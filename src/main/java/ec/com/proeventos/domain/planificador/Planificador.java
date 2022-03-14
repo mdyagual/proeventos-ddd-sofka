@@ -6,7 +6,7 @@ import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import ec.com.proeventos.domain.planificador.event.InformacionCreada;
 import ec.com.proeventos.domain.planificador.event.ItinerarioCreado;
-import ec.com.proeventos.domain.planificador.event.PlanficadorCreado;
+import ec.com.proeventos.domain.planificador.event.PlanificadorCreado;
 import ec.com.proeventos.domain.planificador.event.RegistroCreado;
 import ec.com.proeventos.domain.planificador.valor.Descripcion;
 import ec.com.proeventos.domain.planificador.valor.Disenio;
@@ -25,7 +25,7 @@ public class Planificador extends AggregateEvent<PlanificadorId> {
 
     public Planificador (PlanificadorId planificadorId,  Informacion informacion, Registro registro, Itinerario itinerario,VentaId ventaId){
         super(planificadorId);
-        appendChange(new PlanficadorCreado(informacion, registro, itinerario, ventaId));
+        appendChange(new PlanificadorCreado(informacion, registro, itinerario, ventaId));
         subscribe(new PlanificadorEventChange(this));
     }
 

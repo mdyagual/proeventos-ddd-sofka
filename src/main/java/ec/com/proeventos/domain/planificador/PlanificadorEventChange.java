@@ -3,13 +3,13 @@ package ec.com.proeventos.domain.planificador;
 import co.com.sofka.domain.generic.EventChange;
 import ec.com.proeventos.domain.planificador.event.InformacionCreada;
 import ec.com.proeventos.domain.planificador.event.ItinerarioCreado;
-import ec.com.proeventos.domain.planificador.event.PlanficadorCreado;
+import ec.com.proeventos.domain.planificador.event.PlanificadorCreado;
 import ec.com.proeventos.domain.planificador.event.RegistroCreado;
 
 public class PlanificadorEventChange extends EventChange {
     public PlanificadorEventChange(Planificador planificador){
         /*Creacion*/
-        apply((PlanficadorCreado event) -> {
+        apply((PlanificadorCreado event) -> {
             planificador.informacion = event.getInformacion();
             planificador.registro = event.getRegistro();
             planificador.itinerario = event.getItinerario();
