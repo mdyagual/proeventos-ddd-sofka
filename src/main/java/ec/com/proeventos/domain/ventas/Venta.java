@@ -6,12 +6,6 @@ import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import ec.com.proeventos.domain.ventas.event.InformacionClienteActualizado;
 import ec.com.proeventos.domain.ventas.event.PagoContratoActualizado;
-import ec.com.proeventos.domain.ventas.event.ReporteVendedorActualizado;
-import ec.com.proeventos.domain.ventas.event.ReporteVendedorAgregado;
-import ec.com.proeventos.domain.ventas.event.ReporteVendedorEliminado;
-import ec.com.proeventos.domain.ventas.event.AdicionalContratoActualizado;
-import ec.com.proeventos.domain.ventas.event.AdicionalContratoAgregado;
-import ec.com.proeventos.domain.ventas.event.AdicionalContratoEliminado;
 import ec.com.proeventos.domain.ventas.event.ClienteCreado;
 import ec.com.proeventos.domain.ventas.event.ContratoActualizado;
 import ec.com.proeventos.domain.ventas.event.ContratoCreado;
@@ -20,7 +14,6 @@ import ec.com.proeventos.domain.ventas.event.EstadoContratoActualizado;
 import ec.com.proeventos.domain.ventas.event.DatosVendedorActualizado;
 import ec.com.proeventos.domain.ventas.event.VendedorCreado;
 import ec.com.proeventos.domain.ventas.event.VentaCreada;
-import ec.com.proeventos.domain.ventas.valor.Adicional;
 import ec.com.proeventos.domain.ventas.valor.ClienteId;
 import ec.com.proeventos.domain.ventas.valor.ContratoId;
 import ec.com.proeventos.domain.ventas.valor.Dato;
@@ -28,7 +21,6 @@ import ec.com.proeventos.domain.ventas.valor.Estado;
 import ec.com.proeventos.domain.ventas.valor.Fecha;
 import ec.com.proeventos.domain.ventas.valor.Informacion;
 import ec.com.proeventos.domain.ventas.valor.Pago;
-import ec.com.proeventos.domain.ventas.valor.Reporte;
 import ec.com.proeventos.domain.ventas.valor.VendedorId;
 import ec.com.proeventos.domain.ventas.valor.VentaId;
 
@@ -88,10 +80,7 @@ public class Venta extends AggregateEvent<VentaId>{
         appendChange(new DatosVendedorActualizado(vendedorId,datos)).apply();
     }
 
-    public void actualizarReporteVendedor(VendedorId vendedorId, Reporte r){
-        appendChange(new ReporteVendedorActualizado(vendedorId,r)).apply();
-    }   
-
+   
     public void actualizarPagoContrato(ContratoId contratoId, Pago pago){
         appendChange(new PagoContratoActualizado(contratoId,pago)).apply();
     }
@@ -100,33 +89,10 @@ public class Venta extends AggregateEvent<VentaId>{
         appendChange(new EstadoContratoActualizado(contratoId, estado)).apply();
     }
 
-    public void actualizarAdicionalContrato(ContratoId contratoId, Adicional add){
-        appendChange(new AdicionalContratoActualizado(contratoId,add)).apply();
-    }
+   
 
-    //---------------Eventos: Agregar
-    public void agregarReporteVendedor(VendedorId vendedorId, Dato datos, Reporte r){
-        appendChange(new ReporteVendedorAgregado(vendedorId,datos,r)).apply();
-    }
+   
 
-    public void agregarAdicionalContrato(ContratoId contratoId, Adicional add){
-        appendChange(new AdicionalContratoAgregado(contratoId,add)).apply();
-    }
-
-    //--------------Eventos: Eliminar
-    public void eliminarReporteVendedor(Reporte r){
-        appendChange(new ReporteVendedorEliminado(r)).apply();
-    
-    }
-
-    //No tiene sentido eliminar un pago en contexto de la empresa
-    /*public void eliminarPagoContrato(ContratoId contratoId){
-        
-    }*/
-
-    public void eliminarAdicionalContrato(Adicional add){
-        appendChange(new AdicionalContratoEliminado(add)).apply();
-    }
     
 
 }

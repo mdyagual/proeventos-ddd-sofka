@@ -9,14 +9,9 @@ import ec.com.proeventos.domain.ventas.event.DireccionClienteActualizado;
 import ec.com.proeventos.domain.ventas.event.DatosVendedorActualizado;
 import ec.com.proeventos.domain.ventas.event.ContratoCreado;
 import ec.com.proeventos.domain.ventas.event.ContratoActualizado;
-import ec.com.proeventos.domain.ventas.event.ReporteVendedorActualizado;
 import ec.com.proeventos.domain.ventas.event.PagoContratoActualizado;
 import ec.com.proeventos.domain.ventas.event.EstadoContratoActualizado;
-import ec.com.proeventos.domain.ventas.event.AdicionalContratoActualizado;
-import ec.com.proeventos.domain.ventas.event.ReporteVendedorAgregado;
-import ec.com.proeventos.domain.ventas.event.AdicionalContratoAgregado;
-import ec.com.proeventos.domain.ventas.event.ReporteVendedorEliminado;
-import ec.com.proeventos.domain.ventas.event.AdicionalContratoEliminado;
+
 
 
 public class VentaEventChange extends EventChange {
@@ -69,12 +64,7 @@ public class VentaEventChange extends EventChange {
         apply((DatosVendedorActualizado event) -> {
             venta.vendedor.actualizarDatos(event.getDatos());
             
-        });
-
-        apply((ReporteVendedorActualizado event) -> {
-            venta.vendedor.actualizarReporte(event.getReporte());
-            
-        });
+        });       
 
         apply((PagoContratoActualizado event) -> {
             venta.contrato.actualizarPago(event.getPago());
@@ -85,35 +75,6 @@ public class VentaEventChange extends EventChange {
             venta.contrato.actualizarEstado(event.getEstado());
             
         });
-
-        apply((AdicionalContratoActualizado event) -> {
-            venta.contrato.actualizarAdicional(event.getAdicional());
-            
-        });
-
-        /* Agregar */
-        apply((ReporteVendedorAgregado event) -> {
-            venta.vendedor.agregarReporte(event.getReporte());
-            
-        });
-
-        apply((AdicionalContratoAgregado event) -> {
-            venta.contrato.agregarAdicional(event.getAdicional());
-            
-        });
-
-        /* Eliminar */
-        apply((ReporteVendedorEliminado event) -> {
-            venta.vendedor.eliminarReporte(event.getReporte());
-            
-        });
-
-        apply((AdicionalContratoEliminado event) -> {
-            venta.contrato.eliminarAdicional(event.getAdicional());
-            
-        });
-
-
 
 
     }
