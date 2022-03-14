@@ -6,7 +6,7 @@ import co.com.sofka.business.support.ResponseEvents;
 import ec.com.proeventos.domain.venta.Venta;
 import ec.com.proeventos.domain.venta.command.CrearVendedor;
 
-public class CreaVendedorUseCase extends UseCase<RequestCommand<CrearVendedor>, ResponseEvents>  {
+public class CrearVendedorUseCase extends UseCase<RequestCommand<CrearVendedor>, ResponseEvents>  {
     @Override
     public void executeUseCase(RequestCommand<CrearVendedor> input){
         var command = input.getCommand();
