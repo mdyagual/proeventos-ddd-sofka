@@ -1,4 +1,4 @@
-package ec.com.proeventos.usecases;
+package ec.com.proeventos.domain.ventas.usecases;
 
 import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.support.RequestCommand;
