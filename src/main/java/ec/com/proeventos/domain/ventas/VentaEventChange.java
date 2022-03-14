@@ -7,8 +7,6 @@ import ec.com.proeventos.domain.ventas.event.ClienteCreado;
 import ec.com.proeventos.domain.ventas.event.InformacionClienteActualizado;
 import ec.com.proeventos.domain.ventas.event.DireccionClienteActualizado;
 import ec.com.proeventos.domain.ventas.event.DatosVendedorActualizado;
-import ec.com.proeventos.domain.ventas.event.ContratoCreado;
-import ec.com.proeventos.domain.ventas.event.ContratoActualizado;
 import ec.com.proeventos.domain.ventas.event.PagoContratoActualizado;
 import ec.com.proeventos.domain.ventas.event.EstadoContratoActualizado;
 
@@ -38,18 +36,7 @@ public class VentaEventChange extends EventChange {
             
         });
 
-        //Contrato creado
-        apply((ContratoCreado event) -> {
-            venta.contrato= new Contrato(event.getContratoId(),event.getTotal());
-            
-        });
-
-        /* Actualizacion */
-        apply((ContratoActualizado event) -> {
-            venta.contrato= new Contrato(event.getContratoId(),event.getTotal());
-            
-        });
-
+       
         apply((InformacionClienteActualizado event) -> {
             venta.cliente= new Cliente(event.getClienteId(),event.getInformacion());
             
