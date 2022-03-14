@@ -18,17 +18,17 @@ public class PlanificadorEventChange extends EventChange {
         });
 
         apply((InformacionCreada event) -> {
-          // planificador.informacion= new Informacion(event.getUsuario());
+          planificador.informacion= new Informacion(event.getInformacionId(), event.getUsuario());
             
         });
 
         apply((RegistroCreado event) -> {
-           // planificador.registro= new Registro(event.getUsuario());
+           planificador.registro= new Registro(event.getRegistroId(), event.getDescripcion());
              
         });
 
         apply((ItinerarioCreado event) -> {
-            // planificador.registro= new Registro(event.getUsuario());
+            planificador.itinerario= new Itinerario(event.getItinerarioId(), event.getDisenio());
               
           });
 
