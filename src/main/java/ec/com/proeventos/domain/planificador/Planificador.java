@@ -50,7 +50,7 @@ public class Planificador extends AggregateEvent<PlanificadorId> {
         appendChange(new RegistroCreado(registroId, descripcion)).apply();
     }
 
-    public void crearitinerario(ItinerarioId itinerarioId,Disenio disenio){
+    public void crearItinerario(ItinerarioId itinerarioId,Disenio disenio){
         appendChange(new ItinerarioCreado(itinerarioId,disenio)).apply();
 
     }
