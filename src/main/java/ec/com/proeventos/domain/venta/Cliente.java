@@ -1,8 +1,8 @@
-package ec.com.proeventos.domain.ventas;
+package ec.com.proeventos.domain.venta;
 
 import co.com.sofka.domain.generic.Entity;
-import ec.com.proeventos.domain.ventas.valor.ClienteId;
-import ec.com.proeventos.domain.ventas.valor.Informacion;
+import ec.com.proeventos.domain.venta.valor.ClienteId;
+import ec.com.proeventos.domain.venta.valor.Informacion;
 
 public class Cliente extends Entity<ClienteId>{
     private Informacion informacion;

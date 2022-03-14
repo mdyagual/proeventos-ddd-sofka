@@ -1,8 +1,8 @@
-package ec.com.proeventos.domain.ventas.command;
+package ec.com.proeventos.domain.venta.command;
 
 import co.com.sofka.domain.generic.Command;
-import ec.com.proeventos.domain.ventas.valor.ContratoId;
-import ec.com.proeventos.domain.ventas.valor.Pago;
+import ec.com.proeventos.domain.venta.valor.ContratoId;
+import ec.com.proeventos.domain.venta.valor.Pago;
 
 public class ActualizarPagoContrato extends Command{
     private final ContratoId contratoId;

@@ -1,14 +1,14 @@
-package ec.com.proeventos.domain.ventas;
+package ec.com.proeventos.domain.venta;
 
 import co.com.sofka.domain.generic.EventChange;
-import ec.com.proeventos.domain.ventas.event.VentaCreada;
-import ec.com.proeventos.domain.ventas.event.VendedorCreado;
-import ec.com.proeventos.domain.ventas.event.ClienteCreado;
-import ec.com.proeventos.domain.ventas.event.InformacionClienteActualizado;
-import ec.com.proeventos.domain.ventas.event.DireccionClienteActualizado;
-import ec.com.proeventos.domain.ventas.event.DatosVendedorActualizado;
-import ec.com.proeventos.domain.ventas.event.PagoContratoActualizado;
-import ec.com.proeventos.domain.ventas.event.EstadoContratoActualizado;
+import ec.com.proeventos.domain.venta.event.ClienteCreado;
+import ec.com.proeventos.domain.venta.event.DatosVendedorActualizado;
+import ec.com.proeventos.domain.venta.event.DireccionClienteActualizado;
+import ec.com.proeventos.domain.venta.event.EstadoContratoActualizado;
+import ec.com.proeventos.domain.venta.event.InformacionClienteActualizado;
+import ec.com.proeventos.domain.venta.event.PagoContratoActualizado;
+import ec.com.proeventos.domain.venta.event.VendedorCreado;
+import ec.com.proeventos.domain.venta.event.VentaCreada;
 
 
 

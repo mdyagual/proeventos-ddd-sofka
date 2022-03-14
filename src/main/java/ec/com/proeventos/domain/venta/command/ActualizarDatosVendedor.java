@@ -1,8 +1,8 @@
-package ec.com.proeventos.domain.ventas.command;
+package ec.com.proeventos.domain.venta.command;
 
 import co.com.sofka.domain.generic.Command;
-import ec.com.proeventos.domain.ventas.valor.Dato;
-import ec.com.proeventos.domain.ventas.valor.VendedorId;
+import ec.com.proeventos.domain.venta.valor.Dato;
+import ec.com.proeventos.domain.venta.valor.VendedorId;
 
 public class ActualizarDatosVendedor extends Command{
     private final VendedorId vendedorId;

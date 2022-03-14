@@ -1,4 +1,4 @@
-package ec.com.proeventos.domain.ventas.valor;
+package ec.com.proeventos.domain.venta.valor;
 
 import co.com.sofka.domain.generic.ValueObject;
 

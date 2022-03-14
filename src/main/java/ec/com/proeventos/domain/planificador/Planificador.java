@@ -15,7 +15,7 @@ import ec.com.proeventos.domain.planificador.valor.ItinerarioId;
 import ec.com.proeventos.domain.planificador.valor.PlanificadorId;
 import ec.com.proeventos.domain.planificador.valor.RegistroId;
 import ec.com.proeventos.domain.planificador.valor.Usuario;
-import ec.com.proeventos.domain.ventas.valor.VentaId;
+import ec.com.proeventos.domain.venta.valor.VentaId;
 
 public class Planificador extends AggregateEvent<PlanificadorId> {
     protected Informacion informacion;

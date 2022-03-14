@@ -1,9 +1,9 @@
-package ec.com.proeventos.domain.ventas.command;
+package ec.com.proeventos.domain.venta.command;
 
 import co.com.sofka.domain.generic.Command;
-import ec.com.proeventos.domain.ventas.valor.ClienteId;
-import ec.com.proeventos.domain.ventas.valor.Informacion;
-import ec.com.proeventos.domain.ventas.valor.VentaId;
+import ec.com.proeventos.domain.venta.valor.ClienteId;
+import ec.com.proeventos.domain.venta.valor.Informacion;
+import ec.com.proeventos.domain.venta.valor.VentaId;
 
 public class CrearCliente extends Command {
     private final VentaId ventaId;

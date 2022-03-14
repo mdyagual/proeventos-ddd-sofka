@@ -4,7 +4,7 @@ import co.com.sofka.domain.generic.DomainEvent;
 import ec.com.proeventos.domain.planificador.Informacion;
 import ec.com.proeventos.domain.planificador.Itinerario;
 import ec.com.proeventos.domain.planificador.Registro;
-import ec.com.proeventos.domain.ventas.valor.VentaId;
+import ec.com.proeventos.domain.venta.valor.VentaId;
 
 public class PlanficadorCreado extends DomainEvent {
     private final Informacion informacion;

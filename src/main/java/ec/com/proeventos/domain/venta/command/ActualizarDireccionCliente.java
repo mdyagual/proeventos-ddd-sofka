@@ -1,8 +1,8 @@
-package ec.com.proeventos.domain.ventas.command;
+package ec.com.proeventos.domain.venta.command;
 
 import co.com.sofka.domain.generic.Command;
-import ec.com.proeventos.domain.ventas.valor.ClienteId;
-import ec.com.proeventos.domain.ventas.valor.Informacion;
+import ec.com.proeventos.domain.venta.valor.ClienteId;
+import ec.com.proeventos.domain.venta.valor.Informacion;
 
 public class ActualizarDireccionCliente extends Command {
     private final ClienteId clienteId;

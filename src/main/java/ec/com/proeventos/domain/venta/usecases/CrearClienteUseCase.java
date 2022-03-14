@@ -1,10 +1,10 @@
-package ec.com.proeventos.domain.ventas.usecases;
+package ec.com.proeventos.domain.venta.usecases;
 
 import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.ResponseEvents;
-import ec.com.proeventos.domain.ventas.Venta;
-import ec.com.proeventos.domain.ventas.command.CrearCliente;
+import ec.com.proeventos.domain.venta.Venta;
+import ec.com.proeventos.domain.venta.command.CrearCliente;
 
 public class CrearClienteUseCase extends UseCase<RequestCommand<CrearCliente>, ResponseEvents> {
     @Override

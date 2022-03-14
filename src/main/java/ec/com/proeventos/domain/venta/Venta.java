@@ -1,28 +1,28 @@
-package ec.com.proeventos.domain.ventas;
+package ec.com.proeventos.domain.venta;
 
 import java.util.List;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import ec.com.proeventos.domain.ventas.event.InformacionClienteActualizado;
-import ec.com.proeventos.domain.ventas.event.PagoContratoActualizado;
-import ec.com.proeventos.domain.ventas.event.ClienteCreado;
-import ec.com.proeventos.domain.ventas.event.ContratoActualizado;
-import ec.com.proeventos.domain.ventas.event.ContratoCreado;
-import ec.com.proeventos.domain.ventas.event.DireccionClienteActualizado;
-import ec.com.proeventos.domain.ventas.event.EstadoContratoActualizado;
-import ec.com.proeventos.domain.ventas.event.DatosVendedorActualizado;
-import ec.com.proeventos.domain.ventas.event.VendedorCreado;
-import ec.com.proeventos.domain.ventas.event.VentaCreada;
-import ec.com.proeventos.domain.ventas.valor.ClienteId;
-import ec.com.proeventos.domain.ventas.valor.ContratoId;
-import ec.com.proeventos.domain.ventas.valor.Dato;
-import ec.com.proeventos.domain.ventas.valor.Estado;
-import ec.com.proeventos.domain.ventas.valor.Fecha;
-import ec.com.proeventos.domain.ventas.valor.Informacion;
-import ec.com.proeventos.domain.ventas.valor.Pago;
-import ec.com.proeventos.domain.ventas.valor.VendedorId;
-import ec.com.proeventos.domain.ventas.valor.VentaId;
+import ec.com.proeventos.domain.venta.event.ClienteCreado;
+import ec.com.proeventos.domain.venta.event.ContratoActualizado;
+import ec.com.proeventos.domain.venta.event.ContratoCreado;
+import ec.com.proeventos.domain.venta.event.DatosVendedorActualizado;
+import ec.com.proeventos.domain.venta.event.DireccionClienteActualizado;
+import ec.com.proeventos.domain.venta.event.EstadoContratoActualizado;
+import ec.com.proeventos.domain.venta.event.InformacionClienteActualizado;
+import ec.com.proeventos.domain.venta.event.PagoContratoActualizado;
+import ec.com.proeventos.domain.venta.event.VendedorCreado;
+import ec.com.proeventos.domain.venta.event.VentaCreada;
+import ec.com.proeventos.domain.venta.valor.ClienteId;
+import ec.com.proeventos.domain.venta.valor.ContratoId;
+import ec.com.proeventos.domain.venta.valor.Dato;
+import ec.com.proeventos.domain.venta.valor.Estado;
+import ec.com.proeventos.domain.venta.valor.Fecha;
+import ec.com.proeventos.domain.venta.valor.Informacion;
+import ec.com.proeventos.domain.venta.valor.Pago;
+import ec.com.proeventos.domain.venta.valor.VendedorId;
+import ec.com.proeventos.domain.venta.valor.VentaId;
 
 public class Venta extends AggregateEvent<VentaId>{
     protected Cliente cliente;

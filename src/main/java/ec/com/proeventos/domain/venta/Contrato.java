@@ -1,10 +1,10 @@
-package ec.com.proeventos.domain.ventas;
+package ec.com.proeventos.domain.venta;
 
 import co.com.sofka.domain.generic.Entity;
-import ec.com.proeventos.domain.ventas.valor.ContratoId;
-import ec.com.proeventos.domain.ventas.valor.Estado;
-import ec.com.proeventos.domain.ventas.valor.Fecha;
-import ec.com.proeventos.domain.ventas.valor.Pago;
+import ec.com.proeventos.domain.venta.valor.ContratoId;
+import ec.com.proeventos.domain.venta.valor.Estado;
+import ec.com.proeventos.domain.venta.valor.Fecha;
+import ec.com.proeventos.domain.venta.valor.Pago;
 
 public class Contrato extends Entity<ContratoId>{
     private Double total;

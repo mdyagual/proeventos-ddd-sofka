@@ -1,8 +1,8 @@
-package ec.com.proeventos.domain.ventas.event;
+package ec.com.proeventos.domain.venta.event;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import ec.com.proeventos.domain.ventas.valor.Dato;
-import ec.com.proeventos.domain.ventas.valor.VendedorId;
+import ec.com.proeventos.domain.venta.valor.Dato;
+import ec.com.proeventos.domain.venta.valor.VendedorId;
 
 public class VendedorCreado extends DomainEvent{
     
