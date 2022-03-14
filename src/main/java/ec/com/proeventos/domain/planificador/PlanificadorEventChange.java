@@ -1,0 +1,39 @@
+package ec.com.proeventos.domain.planificador;
+
+import co.com.sofka.domain.generic.EventChange;
+import ec.com.proeventos.domain.planificador.event.InformacionCreada;
+import ec.com.proeventos.domain.planificador.event.ItinerarioCreado;
+import ec.com.proeventos.domain.planificador.event.PlanficadorCreado;
+import ec.com.proeventos.domain.planificador.event.RegistroCreado;
+
+public class PlanificadorEventChange extends EventChange {
+    public PlanificadorEventChange(Planificador planificador){
+        /*Creacion*/
+        apply((PlanficadorCreado event) -> {
+            planificador.informacion = event.getInformacion();
+            planificador.registro = event.getRegistro();
+            planificador.itinerario = event.getItinerario();
+            planificador.ventaId = event.getVentaId();
+           
+        });
+
+        apply((InformacionCreada event) -> {
+          // planificador.informacion= new Informacion(event.getUsuario());
+            
+        });
+
+        apply((RegistroCreado event) -> {
+           // planificador.registro= new Registro(event.getUsuario());
+             
+        });
+
+        apply((ItinerarioCreado event) -> {
+            // planificador.registro= new Registro(event.getUsuario());
+              
+          });
+
+
+    }
+
+   
+}
