@@ -8,7 +8,6 @@ import co.com.sofka.business.support.RequestCommand;
 import ec.com.proeventos.domain.venta.valor.Informacion;
 import ec.com.proeventos.domain.venta.valor.Pago;
 import ec.com.proeventos.domain.venta.valor.VendedorId;
-import ec.com.proeventos.domain.venta.valor.Fecha;
 import ec.com.proeventos.domain.venta.Cliente;
 import ec.com.proeventos.domain.venta.Contrato;
 import ec.com.proeventos.domain.venta.Vendedor;
