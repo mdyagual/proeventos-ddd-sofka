@@ -56,6 +56,9 @@ public class Evento extends AggregateEvent<EventoId> {
 
     }
 
+    public List<Salonero> saloneros(){
+        return saloneros;
+    }
     
 
     
