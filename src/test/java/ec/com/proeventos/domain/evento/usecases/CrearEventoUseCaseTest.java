@@ -53,14 +53,6 @@ class CrearEventoUseCaseTest {
          Assertions.assertEquals(animador, event.getAnimador());
          Assertions.assertEquals(planificadorId, event.getPlanficadorId());
 
-
-
-
-
-
-
-
-
     }
     
 }
