@@ -7,7 +7,7 @@ import ec.com.proeventos.domain.planificador.valor.RegistroId;
 public class Registro extends Entity<RegistroId> {
     private Descripcion descripcion;
 
-    public  Registro(RegistroId registroId, Descripcion descripcion){
+    public Registro(RegistroId registroId, Descripcion descripcion){
         super(registroId);
         this.descripcion = descripcion;
     }
