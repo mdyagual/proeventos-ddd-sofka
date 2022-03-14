@@ -20,7 +20,7 @@ import ec.com.proeventos.domain.ventas.event.EstadoContratoActualizado;
 import ec.com.proeventos.domain.ventas.event.DatosVendedorActualizado;
 import ec.com.proeventos.domain.ventas.event.VendedorCreado;
 import ec.com.proeventos.domain.ventas.event.VentaCreada;
-import ec.com.proeventos.domain.ventas.utils.Adicional;
+import ec.com.proeventos.domain.ventas.valor.Adicional;
 import ec.com.proeventos.domain.ventas.valor.ClienteId;
 import ec.com.proeventos.domain.ventas.valor.ContratoId;
 import ec.com.proeventos.domain.ventas.valor.Dato;
@@ -114,8 +114,8 @@ public class Venta extends AggregateEvent<VentaId>{
     }
 
     //--------------Eventos: Eliminar
-    public void eliminarReporteVendedor(VendedorId vendedorId){
-        appendChange(new ReporteVendedorEliminado(vendedorId)).apply();
+    public void eliminarReporteVendedor(Reporte r){
+        appendChange(new ReporteVendedorEliminado(r)).apply();
     
     }
 
@@ -124,8 +124,8 @@ public class Venta extends AggregateEvent<VentaId>{
         
     }*/
 
-    public void eliminarAdicionalContrato(ContratoId contratoId){
-        appendChange(new AdicionalContratoEliminado(contratoId)).apply();
+    public void eliminarAdicionalContrato(Adicional add){
+        appendChange(new AdicionalContratoEliminado(add)).apply();
     }
     
 

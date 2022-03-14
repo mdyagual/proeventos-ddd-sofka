@@ -79,7 +79,10 @@ public class Contrato extends Entity<ContratoId>{
     public void eliminarAdicional(Adicional add){
         if(this.adicionales.contains(add)){
             this.adicionales.remove(this.adicionales.indexOf(add));
+        }else{
+            System.out.println("No existe el adicional ingresado");
         }
+
     }
 
 

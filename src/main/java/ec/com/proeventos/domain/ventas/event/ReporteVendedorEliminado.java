@@ -1,18 +1,18 @@
 package ec.com.proeventos.domain.ventas.event;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import ec.com.proeventos.domain.ventas.valor.VendedorId;
+import ec.com.proeventos.domain.ventas.valor.Reporte;
 
 public class ReporteVendedorEliminado extends DomainEvent {
-    private final VendedorId vendedorId;
+    private final Reporte reporte;
 
-    public ReporteVendedorEliminado(VendedorId vendedorId) {
+    public ReporteVendedorEliminado(Reporte reporte) {
         super("venta.reportevendedoreliminado");
-        this.vendedorId = vendedorId;
+        this.reporte = reporte;
     }
 
-    public VendedorId getVendedorId() {
-        return vendedorId;
+    public Reporte getReporte() {
+        return reporte;
     }
 
     

@@ -1,19 +1,19 @@
 package ec.com.proeventos.domain.ventas.event;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import ec.com.proeventos.domain.ventas.valor.ContratoId;
+import ec.com.proeventos.domain.ventas.valor.Adicional;
 
 public class AdicionalContratoEliminado extends DomainEvent {
-    private final ContratoId contratoId;
+    private final Adicional adicional;
 
-    public AdicionalContratoEliminado(ContratoId contratoId){
+    public AdicionalContratoEliminado(Adicional adicional){
         super("venta.adicionalcontratoeliminado");
-        this.contratoId = contratoId;
+        this.adicional= adicional;
 
     }
 
-    public ContratoId getContratoId() {
-        return contratoId;
+    public Adicional getAdicional() {
+        return adicional;
     }
 
     

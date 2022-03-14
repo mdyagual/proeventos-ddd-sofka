@@ -1,7 +1,7 @@
 package ec.com.proeventos.domain.ventas.event;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import ec.com.proeventos.domain.ventas.utils.Adicional;
+import ec.com.proeventos.domain.ventas.valor.Adicional;
 import ec.com.proeventos.domain.ventas.valor.ContratoId;
 
 public class AdicionalContratoActualizado extends DomainEvent{
