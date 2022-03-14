@@ -1,4 +1,4 @@
-package ec.com.proeventos.domain.eventos.event;
+package ec.com.proeventos.domain.evento.event;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import ec.com.proeventos.domain.planificador.Planificador;

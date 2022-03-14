@@ -1,4 +1,4 @@
-package ec.com.proeventos.domain.eventos.event;
+package ec.com.proeventos.domain.evento.event;
 
 public class SaloneroEliminado {
     

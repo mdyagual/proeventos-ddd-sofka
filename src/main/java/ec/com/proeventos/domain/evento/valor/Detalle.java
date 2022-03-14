@@ -1,4 +1,4 @@
-package ec.com.proeventos.domain.eventos.valor;
+package ec.com.proeventos.domain.evento.valor;
 
 import java.util.Objects;
 

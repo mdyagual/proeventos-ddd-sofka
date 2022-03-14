@@ -1,9 +1,9 @@
-package ec.com.proeventos.domain.eventos;
+package ec.com.proeventos.domain.evento;
 
 import java.util.List;
 
 import co.com.sofka.domain.generic.AggregateEvent;
-import ec.com.proeventos.domain.eventos.valor.EventoId;
+import ec.com.proeventos.domain.evento.valor.EventoId;
 import ec.com.proeventos.domain.planificador.valor.PlanificadorId;
 
 public class Evento extends AggregateEvent<EventoId> {

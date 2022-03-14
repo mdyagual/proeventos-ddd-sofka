@@ -1,8 +1,8 @@
-package ec.com.proeventos.domain.eventos;
+package ec.com.proeventos.domain.evento;
 
 import co.com.sofka.domain.generic.Entity;
-import ec.com.proeventos.domain.eventos.valor.SaloneroId;
-import ec.com.proeventos.domain.eventos.valor.Turno;
+import ec.com.proeventos.domain.evento.valor.SaloneroId;
+import ec.com.proeventos.domain.evento.valor.Turno;
 
 public class Salonero extends Entity<SaloneroId>{
     private String nombre;

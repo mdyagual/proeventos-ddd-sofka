@@ -1,4 +1,4 @@
-package ec.com.proeventos.domain.eventos;
+package ec.com.proeventos.domain.evento;
 
 public class EventoEventChange {
     

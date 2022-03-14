@@ -1,9 +1,9 @@
-package ec.com.proeventos.domain.eventos;
+package ec.com.proeventos.domain.evento;
 
 import co.com.sofka.domain.generic.Entity;
-import ec.com.proeventos.domain.eventos.valor.CelebracionId;
-import ec.com.proeventos.domain.eventos.valor.Duracion;
-import ec.com.proeventos.domain.eventos.valor.Lugar;
+import ec.com.proeventos.domain.evento.valor.CelebracionId;
+import ec.com.proeventos.domain.evento.valor.Duracion;
+import ec.com.proeventos.domain.evento.valor.Lugar;
 
 public class Celebracion extends Entity<CelebracionId>{
     private Lugar lugar;
